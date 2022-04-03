@@ -8,7 +8,7 @@ import Hamburger from "@/components/Hamburger.vue";
   <div id="hamburger">
     <Hamburger />
   </div>
-  <router-view v-slot="{ Component, route }">
+  <router-view v-slot="{ Component }">
     <transition name="slide" mode="right">
       <component :is="Component" />
     </transition>
