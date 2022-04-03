@@ -15,6 +15,10 @@ import Hamburger from "@/components/Hamburger.vue";
 </template>
 
 <style>
+html {
+  font-size: 62.5%;
+}
+
 #app {
   width: vw(100);
   height: vh(100);
@@ -37,73 +41,5 @@ import Hamburger from "@/components/Hamburger.vue";
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: vh(15);
-}
-
-#navBar {
-  display: inline-block;
-}
-#navBar a {
-  margin: 1rem;
-}
-
-@media (min-width: 0px) {
-  html {
-    font-size: 4px;
-  }
-}
-
-@media (min-width: 320px) {
-  html {
-    font-size: 5px;
-  }
-}
-
-@media (min-width: 480px) {
-  html {
-    font-size: 6px;
-  }
-}
-
-@media (min-width: 600px) {
-  html {
-    font-size: 8px;
-  }
-}
-
-@media (min-width: 720px) {
-  html {
-    font-size: 10px;
-  }
-}
-
-@media (min-width: 840px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1440px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1920px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 2400px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 4000px) {
-  html {
-    font-size: 24px;
-  }
 }
 </style>
