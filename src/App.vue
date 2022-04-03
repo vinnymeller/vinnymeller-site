@@ -1,125 +1,123 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
+import { RouterView } from "vue-router";
+import CommonFooter from "@/components/CommonFooter.vue";
+import Hamburger from "@/components/Hamburger.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div id="hamburger">
+    <Hamburger />
+  </div>
+  <router-view v-slot="{ Component, route }">
+    <transition name="slide" mode="right">
+      <component :is="Component" />
+    </transition>
+  </router-view>
+  <div id="footer">
+    <CommonFooter />
+  </div>
 </template>
 
 <style>
-@import "@/assets/base.css";
-
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  width: vw(100);
+  height: vh(100);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+#hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  height: vh(15);
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-nav {
+#footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  height: vh(15);
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
+#navBar {
   display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+}
+#navBar a {
+  margin: 1rem;
 }
 
-nav a:first-of-type {
-  border: 0;
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.2s, transform 0.4s;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 0px) {
+  html {
+    font-size: 4px;
   }
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@media (min-width: 320px) {
+  html {
+    font-size: 5px;
   }
+}
 
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+@media (min-width: 480px) {
+  html {
+    font-size: 6px;
   }
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+@media (min-width: 600px) {
+  html {
+    font-size: 8px;
   }
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
+@media (min-width: 720px) {
+  html {
+    font-size: 10px;
   }
+}
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+@media (min-width: 840px) {
+  html {
+    font-size: 12px;
+  }
+}
 
-    padding: 1rem 0;
-    margin-top: 1rem;
+@media (min-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 2400px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 4000px) {
+  html {
+    font-size: 24px;
   }
 }
 </style>
