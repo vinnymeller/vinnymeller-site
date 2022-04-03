@@ -11,7 +11,7 @@ import {
   faTwitter,
   faTwitch,
 } from "@fortawesome/free-brands-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faGithub,
@@ -21,7 +21,8 @@ library.add(
   faYoutubeSquare,
   faTwitter,
   faTwitch,
-  faBars
+  faBars,
+  faHouseChimney
 );
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";

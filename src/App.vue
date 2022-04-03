@@ -8,11 +8,7 @@ import Hamburger from "@/components/Hamburger.vue";
   <div id="hamburger">
     <Hamburger />
   </div>
-  <router-view v-slot="{ Component }">
-    <transition name="slide" mode="right">
-      <component :is="Component" />
-    </transition>
-  </router-view>
+  <RouterView />
   <div id="footer">
     <CommonFooter />
   </div>
@@ -49,16 +45,6 @@ import Hamburger from "@/components/Hamburger.vue";
 }
 #navBar a {
   margin: 1rem;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: opacity 0.2s, transform 0.4s;
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateX(-100%);
 }
 
 @media (min-width: 0px) {
