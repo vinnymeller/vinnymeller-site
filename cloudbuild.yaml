@@ -1,4 +1,16 @@
 steps:
+  # install dependencies
+  - name: node:14
+    entrypoint: npm
+    args:
+      - "ci"
+  # build the app
+  - name: node:14
+    entrypoint: npm
+    args:
+      - "run"
+      - "build"
+  # deploy to app engine
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
     args:
