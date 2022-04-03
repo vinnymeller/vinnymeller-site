@@ -11,7 +11,6 @@ import { RouterLink } from "vue-router";
 .container {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -23,6 +22,12 @@ import { RouterLink } from "vue-router";
 .container a:hover {
   color: #aaa;
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: 0.3s;
+}
+
+@media (min-width: 0px) {
+  .container a {
+    font-size: calc(3rem + 1vw);
+  }
 }
 </style>

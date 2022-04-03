@@ -29,13 +29,10 @@
 .container {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .container a {
   text-decoration: none;
-  margin: 0 1rem;
 }
 
 #github:hover,
@@ -75,5 +72,25 @@
 
 #twitch {
   color: #6441a4;
+}
+
+@media (min-width: 0px) {
+  .container {
+    margin-bottom: 1rem;
+  }
+  .container a {
+    font-size: calc(2rem + 2vw);
+    margin: 0 calc(1rem + 2vw);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    margin-bottom: 1.5rem;
+  }
+  .container a {
+    font-size: calc(3rem + 1vw);
+    margin: 0 calc(2rem + 1vw);
+  }
 }
 </style>
