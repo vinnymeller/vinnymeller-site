@@ -3,7 +3,7 @@ import { RouterLink } from "vue-router";
 </script>
 <template>
   <div class="container">
-    <RouterLink to="/"><font-awesome-icon icon="bars" /></RouterLink>
+    <RouterLink to="/"><font-awesome-icon icon="house-chimney" /></RouterLink>
   </div>
 </template>
 
