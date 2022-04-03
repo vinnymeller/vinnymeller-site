@@ -2,7 +2,7 @@
 
 ## Workflows
 
-![Linters](https://github.com/vinnymeller/vinnymeller-site/actions/workflows/linters.yaml/badge.svg)
+![Linters](https://github.com/vinnymeller/vinnymeller-site/actions/workflows/linters.yaml/badge.svg) ![Build](https://github.com/vinnymeller/vinnymeller-site/actions/workflows/build.yaml/badge.svg)
 
 This template should help get you started developing with Vue 3 in Vite.
 
