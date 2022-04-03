@@ -1,0 +1,9 @@
+steps:
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      - "app" # app engine
+      - "deploy" # deploy app
+      - "--promote" # migrate all traffic to new revision
+      - "--quiet" # don't prompt for anything
+      - "--stop-previous-version" # stop previous revision
