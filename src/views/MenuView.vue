@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from "@/components/TheWelcome.vue";
+import MenuNav from "@/components/MenuNav.vue";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <MenuNav />
   </main>
 </template>
