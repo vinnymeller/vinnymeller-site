@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <div class="container">
-    <a href="https://www.github.com/vinnymeller"
+    <a href="https://github.com/vinnymeller/vinnymeller-site"
       ><font-awesome-icon :icon="['fab', 'github']" id="github"
     /></a>
     <a href="https://www.linkedin.com/in/vinnymeller"
@@ -79,8 +79,15 @@
     margin-bottom: 1rem;
   }
   .container a {
+    font-size: calc(1.75rem + 1vw);
+    margin: 0 calc(1rem + 1vw);
+  }
+}
+
+@media (min-width: 420px) {
+  .container a {
     font-size: calc(2rem + 2vw);
-    margin: 0 calc(1rem + 2vw);
+    margin: 0 calc(1.5rem + 1.25vw);
   }
 }
 
