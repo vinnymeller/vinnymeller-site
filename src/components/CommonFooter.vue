@@ -86,8 +86,8 @@
 
 @media (min-width: 420px) {
   .container a {
-    font-size: calc(2rem + 2vw);
-    margin: 0 calc(1.5rem + 1.25vw);
+    font-size: calc(2rem + 1.5vw);
+    margin: 0 calc(1.25rem + 1vw);
   }
 }
 
