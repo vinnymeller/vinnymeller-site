@@ -22,6 +22,7 @@ import { RouterLink } from "vue-router";
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   margin: 0 auto;
+  margin-top: 30rem;
 }
 
 .myName h1 {
